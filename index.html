@@ -7,26 +7,48 @@
     <title>stefpistudio</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Header-Blue.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+    <link rel="stylesheet" href="assets/css/Social-Icons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="color: var(--dark);background: var(--teal);">
-        <div class="container"><a class="navbar-brand" href="#" style="color: var(--dark);">Stefpi Studios</a>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto"></ul>
+    <div class="projects-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" style="height: 18px;">Stefpi's Projects </h2>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/desk.jpg">
+                    <h3 class="name" style="height: 40px;">Twitch Video Downloader</h3>
+                    <div class="row">
+                        <div class="col"><a href="https://github.com/stefpi/tvd"><button class="btn btn-primary" type="button">Source Code</button></a></div>
+                    </div>
+                    <p class="description">Twitch Clip and Youtube Video downloader coded in Node.js and Pug. <br>Next Changes: Remake using React.js</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/building.jpg">
+                    <h3 class="name" style="height: 40px;">Snake</h3>
+                    <div class="row">
+                        <div class="col"><a href="https://github.com/stefpi/Snake"><button class="btn btn-primary" type="button">Source Code</button></a></div>
+                        <div class="col"><a href="https://github.com/stefpi/Snake/releases/download/1.0/Snake-1.0.jar"><button class="btn btn-primary" type="button">Download</button></a></div>
+                    </div>
+                    <p class="description">A java snake game with one-player and two-player snake modesMade in Java 1.8<br>Java runtime is required to run</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/loft.jpg">
+                    <h3 class="name" style="height: 40px;">Pong</h3>
+                    <div class="row">
+                        <div class="col"><a href="https://github.com/stefpi/Pong"><button class="btn btn-primary" type="button">Source Code</button></a></div>
+                        <div class="col"><a href="https://github.com/stefpi/Pong/releases/download/1.0/Pong.jar"><button class="btn btn-primary" type="button">Download</button></a></div>
+                    </div>
+                    <p class="description">Pong game written in java, play against the computer or with a friend.Written in Java 1.8<br>Java runtime is required to run</p>
+                </div>
             </div>
         </div>
-    </nav>
-    <h1 style="height: 96px;">Projects</h1>
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Twitch Video Downloader</h4>
-            <p class="card-text">Twitch Clip and Youtube Video downloader coded in Node.js and Pug. Next Steps: Remake using React.js</p><a class="card-link" href="https://github.com/stefpi/tvd"><button class="btn btn-primary" type="button">Github Repo</button></a>
-        </div>
     </div>
+    <div class="social-icons"><i class="icon ion-social-twitter"></i><a href="#"></a><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-youtube"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
