@@ -1,79 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style id="compiled-css" type="text/css">
-    * { margin:0; padding:0; }
-    body {
-      width: 100%;
-      height: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: transparent;
-    }
-    canvas {
-      display: block;
-      background-color: transparent;
-      position: fixed;
-      top: 0;
-      text-shadow: 0 0 .0428571429em #c7fc7e, 0 0 .1857142857em #c7fc7e, 0 0 .3em 
-      color-mix(in srgb, #c7fc7e, hsla(0, 0%, 100%, 0) 40%), 0 0 .5em 
-      color-mix(in srgb, #c7fc7e, hsla(0, 0%, 100%, 0) 40%);
-    }
-    .crt-overlay {
-      background: linear-gradient(transparent 50%, rgba(0, 0, 0, .21) 0), linear-gradient(90deg, rgba(255, 0, 0, .055), rgba(0, 255, 0, .03), rgba(0, 0, 255, .055));
-      background-position-y: .0714285714rem;
-      background-size: 100% .2142857143rem, .2857142857rem 100%;
-      z-index: 10;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-    .crt-background {
-      position: fixed;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      background-image: radial-gradient(50% 50% at 50% 50%, #354228 0, #0f140a 100%);
-    }
-    .ascii-art {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      text-align: center;
-    }
-    .full-view {
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-    .full-view-fixed {
-      position: fixed;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: transparent;
-    }
-
-    #face {
-      font-size: 6px;
-      --tw-text-opacity: 1;
-      color: rgb(199 252 126 / var(--tw-text-opacity));
-      text-shadow: 0 0 .0428571429em #c7fc7e, 0 0 .1857142857em #c7fc7e, 0 0 .3em 
-      color-mix(in srgb, #c7fc7e, hsla(0, 0%, 100%, 0) 40%), 0 0 .5em 
-      color-mix(in srgb, #c7fc7e, hsla(0, 0%, 100%, 0) 40%);
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css">
 
   <script>
   const a = 0.01;
@@ -107,21 +39,25 @@
     const response = await fetch('function.json');
     const points = await response.json();
 
-    await drawFace();
-
     canvas = document.querySelector('#plotter');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvasContainer = document.getElementById('canvas-container').getBoundingClientRect();
+    
+    console.log(canvasContainer)
+
+    
+    canvas.width = canvasContainer.width - 80;
+    canvas.height = canvasContainer.height - 80;
     plotter = canvas.getContext("2d");
     plotter.translate(canvas.width/2, canvas.height/2);
 
     function drawNode(x, y, brightness) {
       plotter.beginPath();
-      plotter.fillStyle = `rgba(199, 252, 126, ${brightness})`;
-      plotter.arc(x, y, radius, 0, Math.PI * 2, true);
-      // plotter.rect(x, y, 3.4285714288, 3.4285714288);
-      plotter.strokeStyle = `rgba(199, 252, 126, ${brightness})`;
-      plotter.stroke();
+      plotter.fillStyle = `rgba(255, 255, 255, ${brightness})`;
+      // plotter.arc(x, y, radius, 0, Math.PI * 2, true);
+      // plotter.arc(x, y, 3, 0, Math.PI * 2, true);
+      plotter.rect(x, y, 3, 3);
+      // plotter.strokeStyle = `rgba(255, 255, 255, ${brightness})`;
+      // plotter.stroke();
       plotter.fill();
     }
 
@@ -141,7 +77,7 @@
 
     // console.log(g, j, k)
 
-    let startPoint = 2000;
+    let startPoint = 6000;
     let rotating = true;
     var interval = window.setInterval(function () {
       plotter.save();
@@ -152,15 +88,9 @@
 
       let h = 0.6289513340634733
 
-      const range = window.innerHeight;
-      const percent = window.pageYOffset / range;
-
-      document.getElementById('face').style.opacity = percent;
-      document.getElementById('face').style.transform = `scale(${percent**2})`;
-      startPoint = Math.floor((percent/1.7 * points.length) + 2000); // dissolve function
-
       for (let l = startPoint; l < points.length; l++) {
-        drawNode(points[l][0], points[l][1], points[l][2]);
+        // drawNode(points[l][0], points[l][1], points[l][2]);
+        drawNode(points[l][0], points[l][1], 0.4);
       }
 
       if (rotating) {
@@ -169,34 +99,26 @@
         plotter.rotate(-c);
       }
     }, 50);
-
-    window.addEventListener('scroll', (event) => {
-      
-    })
-
-
-    // for (let c = 0; c > -2*Math.PI; c -= 0.00001) {
-      
-    // }
-
-    // let z = zfinder(x, y);
-    // let zabove = 2000 - z;
-    // let zpercent = zabove / (2000);
-    // let brightnessIndex = Math.floor(zpercent * density.length) - 1;
-
-    // plotter.innerText += density[brightnessIndex] + " ";
-    // console.log(z, zpercent, density[brightnessIndex], brightnessIndex, density.length);
   }
   </script>
   </head>
   <body onload="runPlotter()">
-    <div class="crt-overlay"></div>
-    <div class="crt-background"></div>
-    <canvas id="plotter"></canvas>
-    <div class="full-view-fixed">
-      <pre id="face"></pre>
+    <div class="landing-container">
+      <!-- <div class="hfw" id="canvas-container">
+        <canvas id="plotter"></canvas>
+      </div> -->
+      <div class="hfw" id="menu-container">
+        <img id="image" src="./spikeheadwhite.svg"></img>
+        <a>
+          <h1>about</h1>
+        </a>
+        <a>
+          <h1>projects</h1>
+        </a>
+        <a>
+          <h1>blog</h1>
+        </a>
+      </div>
     </div>
-    <div class="full-view"></div>
-    <div class="full-view"></div>
   </body>
 </html>
