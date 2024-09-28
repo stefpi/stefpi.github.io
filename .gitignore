@@ -1,3 +1,6 @@
+#next.js
+out/
+
 # Logs
 logs
 *.log

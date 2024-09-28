@@ -8,7 +8,7 @@ import "../page.css";
 import Markdown from "markdown-to-jsx";
 
 function getPostContent(slug) {
-  const folder = 'markdown/projects/'
+  const folder = 'src/markdown/projects/'
   const file = folder + `${slug}.md`
   const content = fs.readFileSync(file, 'utf8')
 
@@ -16,9 +16,9 @@ function getPostContent(slug) {
   return matterResult
 }
 
-export const generateStaticParams = async () => {
+export async function generateStaticParams() {
   const posts = getPostMetadata()
-  return posts.map((post) => ({ slug: post.slug }))
+  return posts.map((post) => ({ slug: post.id }))
 }
 
 export async function generateMetadata({ params, searchParams }) {
