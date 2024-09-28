@@ -1,0 +1,81 @@
+* { margin:0; padding:0; }
+html { 
+  cursor: url('../../public/static/images/hand-white.svg') 16 16, default;
+}
+html:active {
+  cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
+}
+body {
+  font-family: "VT323", monospace;
+  color: white;
+
+  width: 100%;
+  height: fit-content;
+  background-color: black;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --rounding: 15px;
+
+  --primary-color: white;
+  --primary-text-color: white;
+
+  --xl-gap: 40px;
+  --lg-gap: 20px;
+  --md-gap: 10px;
+  --sm-gap: 5px;
+}
+
+body > div {
+  width: 700px;
+  @media only screen and (max-width: 780px) {
+    width: 100%;
+    margin-right: var(--xl-gap);
+    margin-left: var(--xl-gap);
+  }
+}
+
+a {
+  color:var(--primary-text-color);
+  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
+  text-decoration: none;
+}
+a:visited { color:var(--primary-text-color); }
+a:hover { text-decoration: underline !important; color:var(--primary-text-color); }
+a:focus { text-decoration: underline; color:var(--primary-text-color); }
+
+button {
+  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
+
+  height: 40px;
+
+  background-color: white;
+  color: black;
+
+  border-radius: var(--rounding);
+  border: 0;
+
+  text-align: center;
+
+  padding: 8px 12px;
+
+  > .back {
+    height: 100%;
+    width: auto;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 300;
+}

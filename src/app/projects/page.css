@@ -1,0 +1,60 @@
+#projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    margin-top: var(--lg-gap);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    button {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  main {
+    text-align: left;
+    margin-top: var(--xl-gap);
+    margin-bottom: calc(var(--xl-gap) * 1.5);
+  }
+
+  .postListings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+  }
+
+  .postListing {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-gap);
+    
+    padding: 20px 0px;
+
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+
+    .postHeader {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sm-gap);
+    }
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xl-gap);
+
+    ul {
+      padding-left: var(--lg-gap);
+    }
+  }
+}

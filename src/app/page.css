@@ -1,0 +1,21 @@
+#home {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-gap);
+}
+
+#home {
+  Link {
+    cursor: pointer;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+  }
+}
+
+
+
