@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Content from '/markdown/about.mdx';
+import Content from '/markdown/about.md';
 
 import "./page.css";
 
