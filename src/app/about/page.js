@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Content from '@/markdown/about.md';
-
 import "./page.css";
 
 export default function About() {
@@ -18,7 +16,11 @@ export default function About() {
           priority={true}
         />
       </Link>
-      <Content />
+      <p>
+        A site about everything cool that I have done so I can remember.
+      <br /><br />
+        I hope this site can help someone else do some cool shit too.
+      </p>
     </div>
   );
 }
