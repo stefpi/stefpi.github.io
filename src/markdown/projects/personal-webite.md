@@ -34,6 +34,33 @@ Since most of the stuff I did was learnt from google searching, instead of tryin
 
 <br>
 
+Be careful when following the deployment tutorial setup above. The following lines can override your existing `next.config.js` file ann throw errors relating to your `mdx` compiler.
+
+<br>
+
+```
+- name: Setup Pages
+  uses: actions/configure-pages@v3
+  with:
+    # Automatically inject basePath in your Next.js configuration file and disable
+    # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+    #
+    # You may remove this line if you want to manage the configuration yourself.
+    static_site_generator: next
+```
+
+<br>
+
+Remove the with part of the ci .yml to fix the error.
+
+Source: https://github.com/vercel/next.js/issues/58637
+
+<br>
+
+### ending notes
+
+<br>
+
 The artwork (if you can call it that) on this site is not found online. I recommend trying to design everything about your site in your own style. Be inspired by others, but do not turn into a clone. I have seen too many people planting the same `Three.js` model in their site that follows your cursor or something of the sort and I know this because I have been one of those clones. Try something new, and see what happens.
 
 <br>
