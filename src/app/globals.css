@@ -30,10 +30,8 @@ body {
 
 body > div {
   width: 700px;
-  @media only screen and (max-width: 780px) {
-    width: 100%;
-    margin-right: var(--xl-gap);
-    margin-left: var(--xl-gap);
+  @media screen and (max-width: 780px) {
+    padding: 0px var(--xl-gap);
   }
 }
 

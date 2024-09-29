@@ -53,7 +53,7 @@
     flex-direction: column;
     gap: var(--xl-gap);
 
-    ul {
+    ul, ol {
       padding-left: var(--lg-gap);
     }
   }

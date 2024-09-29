@@ -34,7 +34,11 @@ Since most of the stuff I did was learnt from google searching, instead of tryin
 
 <br>
 
-Be careful when following the deployment tutorial setup above. The following lines can override your existing `next.config.js` file ann throw errors relating to your `mdx` compiler.
+### tips and stuff I ran into
+
+<br>
+
+1. Be careful when following the deployment tutorial setup above. The following lines can override your existing `next.config.js` file ann throw errors relating to your `mdx` compiler.
 
 <br>
 
@@ -57,7 +61,11 @@ Source: https://github.com/vercel/next.js/issues/58637
 
 <br>
 
-### ending notes
+2. Additionally, go to your github repo to Settings > Code and Automation > Pages and then change the source of your build and deployment to Github Actions in order for your deployment CI to function properly and not be overridden by deployment from a branch.
+
+<br>
+
+## ending notes
 
 <br>
 
