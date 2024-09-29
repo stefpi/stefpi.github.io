@@ -69,7 +69,7 @@ Source: https://github.com/vercel/next.js/issues/58637
 
 <br>
 
-The artwork (if you can call it that) on this site is not found online. I recommend trying to design everything about your site in your own style. Be inspired by others, but do not turn into a clone. I have seen too many people planting the same `Three.js` model in their site that follows your cursor or something of the sort and I know this because I have been one of those clones. Try something new, and see what happens.
+I recommend trying to design everything about your site in your own style. Be inspired by others, try something new.
 
 <br>
 
@@ -79,4 +79,4 @@ Some of the best free tools for such a task:
 
 <br>
 
-Now I am going to go deploy this on github pages for the first time. It probably won't go too smoothly, but I assure you that if I can, you can too.
+Now I am going to go deploy this on github pages for the first time. It probably won't go too smoothly, but I assure you that if I can, you can too. This blog also serves as a test. Hopefully I'll post some cooler stuff than this and hopefully this site gets better.

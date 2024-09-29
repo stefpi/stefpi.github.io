@@ -1,8 +1,8 @@
 * { margin:0; padding:0; }
-html { 
+* { 
   cursor: url('../../public/static/images/hand-white.svg') 16 16, default;
 }
-html:active {
+*:active {
   cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
 }
 body {
@@ -37,16 +37,20 @@ body > div {
 
 a {
   color:var(--primary-text-color);
-  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
   text-decoration: none;
 }
 a:visited { color:var(--primary-text-color); }
-a:hover { text-decoration: underline !important; color:var(--primary-text-color); }
+a:hover, a > *:hover {
+  text-decoration: underline;
+  color:var(--primary-text-color);
+  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
+}
+a:active, a > *:active {
+  cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
+}
 a:focus { text-decoration: underline; color:var(--primary-text-color); }
 
 button {
-  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
-
   height: 40px;
 
   background-color: white;
@@ -63,6 +67,14 @@ button {
     height: 100%;
     width: auto;
   }
+}
+
+button:hover, button > *:hover {
+  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
+}
+
+button:active, button > *:active {
+  cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
 }
 
 h1 {
