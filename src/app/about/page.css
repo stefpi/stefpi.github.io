@@ -6,7 +6,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--lg-gap);
+  gap: var(--xl-gap);
 
-  text-align: center;
+  .blurb {
+    p {
+      text-align: center;
+    }
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--lg-gap);
+    
+    .card {
+      width: 100%;
+    }
+
+    .cardHeader {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .cardBody {
+      
+    }
+  }
 }

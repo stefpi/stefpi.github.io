@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 import ProjectLayout from "../projectlayout";
 
-import "../page.css";
+import "./page.css";
 import Markdown from "markdown-to-jsx";
 
 function getPostContent(slug) {
@@ -34,7 +34,7 @@ export default function Projects(props) {
   console.log(post)
   return (
     <ProjectLayout>
-      <article>
+      <article id="article">
         <h1 style={{textAlign: "center"}}>{post.data.title}</h1>
         <Markdown>{post.content}</Markdown>
       </article>
