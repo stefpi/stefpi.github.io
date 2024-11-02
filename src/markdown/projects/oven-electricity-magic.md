@@ -2,6 +2,7 @@
 title: 'The miracle of your oven turning on the lights in your house'
 date: '2024-10-30'
 desc: a very bizzare situation explained by simple electronics
+tags: ['electronics']
 ---
 
 Last week I visited a friends house and the most peculiar of things happened. His house lights were out, seemingly because of a faulty breaker box which needed replacing, but would come back to life the instant the dial on his stovetop was turned to on. Half the lights in his house were now controlled by his stove! Must've been a magic trick right?

@@ -46,6 +46,26 @@
       flex-direction: column;
       gap: var(--sm-gap);
     }
+
+    .postSubHeader {
+      display: flex;
+      flex-direction: row;
+      gap: var(--md-gap);
+    }
+
+    .postTags {
+      display: flex;
+      flex-direction: row;
+      gap: var(--md-gap);
+      align-items: center;
+
+      .postTag {
+        font-size: var(--xs-text);
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 1px 5px;
+      }
+    }
   }
 
   article {

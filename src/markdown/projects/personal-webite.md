@@ -2,6 +2,7 @@
 title: 'Deploying your own static templated site using github pages'
 date: '2024-09-28'
 desc: explore how this site was made and how you can make your own
+tags: ['frontend', 'tutorial']
 ---
 
 This website was built in Next.js with vanilla css and some plugins which translate `.md` files into `jsx` allowing for dynamic embedding of said markdown files. A common misconception is that websites built using frameworks need extravagant deployment methods such as `netlify`, when in reality most websites built in React-based frameworks can still be statically built and served for free on sites such as github pages. In this way you get all the benefits of components and being about to template your site and also take advantage of a free way to deploy your wonderful site after you are done.

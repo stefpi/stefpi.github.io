@@ -1,10 +1,15 @@
 * { margin:0; padding:0; }
 * { 
-  cursor: url('../../public/static/images/hand-white.svg') 16 16, default;
+  cursor: url('../../public/static/images/hand-white.svg') 10 10, default;
 }
 *:active {
-  cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
+  cursor: url('../../public/static/images/hand-holding-white.svg') 10 10, pointer;
 }
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "VT323", monospace;
   color: white;
@@ -26,6 +31,10 @@ body {
   --lg-gap: 20px;
   --md-gap: 10px;
   --sm-gap: 5px;
+
+  --md-text: 16px;
+  --sm-text: 14px;
+  --xs-text: 10px;
 }
 
 body > div {
@@ -43,10 +52,10 @@ a:visited { color:var(--primary-text-color); }
 a:hover, a > *:hover {
   text-decoration: underline;
   color:var(--primary-text-color);
-  cursor: url('../../public/static/images/hand-pointer-white.svg') 16 16, pointer;
+  cursor: url('../../public/static/images/hand-pointer-white.svg') 10 10, pointer;
 }
 a:active, a > *:active {
-  cursor: url('../../public/static/images/hand-holding-white.svg') 16 16, pointer;
+  cursor: url('../../public/static/images/hand-holding-white.svg') 10 10, pointer;
 }
 a:focus { text-decoration: underline; color:var(--primary-text-color); }
 
