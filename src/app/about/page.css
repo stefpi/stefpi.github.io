@@ -1,6 +1,7 @@
 #about {
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  margin: var(--xl-gap) 0px;
 
   display: flex;
   flex-direction: column;

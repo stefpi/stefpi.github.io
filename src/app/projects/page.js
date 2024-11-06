@@ -21,7 +21,7 @@ export default function Projects({ allPostsData }) {
                 <div className="postTags">
                   {tags.map((tag, index) => {
                     return(
-                      <div className="postTag">
+                      <div className="postTag" key={ index }>
                         {tag}
                       </div>
                     );

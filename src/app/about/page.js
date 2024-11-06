@@ -51,9 +51,9 @@ export default function About() {
               place: "qmind",
               description: "cultivating the look of the digital face of Canada's largest undergraduate artificial intelligence organization."
             }
-          ].map((card, i) => {
+          ].map((card, index) => {
             return (
-              <div className="card">
+              <div className="card" key={ index }>
                 <div className="cardHeader">
                   <p><u><i>{card.title}</i> @ <b>{card.place}</b></u></p>
                 </div>
