@@ -21,4 +21,8 @@
     width: 100%;
     text-wrap: wrap;
   }
+
+  img {
+    max-width: 100%;
+  }
 }

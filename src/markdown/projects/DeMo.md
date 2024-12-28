@@ -146,11 +146,11 @@ The fast-moving principal components are then removed from the current momentum 
 Finally, the optimizer may use a signum variant in order to improve convergence, but is optional.
 <br>
 
-![figure 1.1](/static/blog/demo2.png)
+<center>![figure 1.1](/static/blog/demo2.png)</center>
 
 <br>
 
-### experimental results
+## experimental results
 
 <br>
 
@@ -162,7 +162,7 @@ The DeMo optimizer model was compared with the OLMo-1B model which was also trai
 
 <br>
 
-![figure 1.1](/static/blog/demo3.png)
+<center>![figure 1.1](/static/blog/demo3.png)</center>
 
 <br>
 
@@ -174,7 +174,7 @@ From the figures, at the top, we can see that the DeMo optimizer allows for comp
 
 <br>
 
-### food for thought
+## food for thought
 
 <br>
 
