@@ -64,7 +64,7 @@
 
     .postTag {
       font-size: var(--xs-text);
-      border: 1px solid white;
+      border: 1px solid var(--primary-color);
       border-radius: 5px;
       padding: 1px 5px;
       width: fit-content;

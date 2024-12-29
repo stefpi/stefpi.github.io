@@ -11,12 +11,12 @@ html, body {
 }
 
 body {
-  font-family: "VT323", monospace;
-  color: white;
+  font-family: Helvetica, monospace;
+  color: black;
 
   width: 100%;
   height: fit-content;
-  background-color: black;
+  background-color: var(--background-color);
   
   display: flex;
   justify-content: center;
@@ -24,8 +24,10 @@ body {
 
   --rounding: 15px;
 
-  --primary-color: white;
-  --primary-text-color: white;
+  --background-color: #F5F5F5;
+  --secondary-background-color: #D3D3D3;
+  --primary-color: black;
+  --primary-text-color: black;
 
   --xl-gap: 40px;
   --lg-gap: 20px;
@@ -38,7 +40,7 @@ body {
 }
 
 body > div {
-  width: 700px;
+  width: 800px;
   @media screen and (max-width: 780px) {
     padding: 0px var(--xl-gap);
   }
@@ -62,11 +64,11 @@ a:focus { text-decoration: underline; color:var(--primary-text-color); }
 button {
   height: 40px;
 
-  background-color: white;
+  background-color: var(--background-color);
   color: black;
 
   border-radius: var(--rounding);
-  border: 0;
+  border: 1px solid var(--primary-color);
 
   text-align: center;
 

@@ -1,7 +1,8 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1080" width="1050" height="1080">
 	<title>spike head-ai</title>
 	<style>
-		.s0 { fill: #ffffff } 
+		<!-- .s0 { fill: #ffffff }  -->
+		.s0 { fill: #000000 }
 	</style>
 	<g id="Layer 2">
 	</g>
