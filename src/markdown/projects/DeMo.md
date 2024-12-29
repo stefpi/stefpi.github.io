@@ -98,3 +98,9 @@ The OLMo-1B model was said to have been retrained with adjusted learning rates t
 Furthermore, I wonder how a model with 3B or more parameters would converge with the DeMo optimizer and what the performance of such a model would be lie.
 
 Anyway, I think this was a great paper and Nous Research is really pushing the boundaries of distributed model training. Maybe one day in the future I'll be able to train a LLM on my school labs computers (probably not).
+
+<br>
+
+### references
+
+[1] https://arxiv.org/pdf/2411.19870
