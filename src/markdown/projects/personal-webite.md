@@ -1,5 +1,5 @@
 ---
-title: 'Deploying your own static templated site using github pages'
+title: 'deploying your own static templated site using github pages'
 date: '2024-09-28'
 desc: explore how this site was made and how you can make your own
 tags: ['frontend', 'tutorial']

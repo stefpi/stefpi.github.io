@@ -1,5 +1,5 @@
 ---
-title: 'Distributed Model Training and DeMo'
+title: 'distributed model training and DeMo'
 date: '2024-12-28'
 desc: exploring Nous Research's new paper about distributed model training using a new latency reducing optimizer
 tags: ['machine learning', 'research']
@@ -77,7 +77,7 @@ The fast-moving principal components are then removed from the current momentum 
 
 Finally, the optimizer may use a signum variant in order to improve convergence, but is optional.
 
-<center>![figure 1.1](/static/blog/demo2.png)</center>
+![figure 1.2](/static/blog/demo2.png)
 
 ## experimental results
 
@@ -85,7 +85,7 @@ To train a model using DeMo, the OLMo framework was used. The Allen AI institute
 
 The DeMo optimizer model was compared with the OLMo-1B model which was also trained on the 100 billion tokens (with adjusted learning rate schedule). The experiments were also repated on a smaller 300M model made by halving the OLMo-1B hidden size. All model training was performed on 64 H100 GPUS.
 
-<center>![figure 1.1](/static/blog/demo3.png)</center>
+![figure 1.3](/static/blog/demo3.png)
 
 These were the results! The k values is the hyper parameter that decides the number of frequencies taken from each chunk in the DCT step.
 

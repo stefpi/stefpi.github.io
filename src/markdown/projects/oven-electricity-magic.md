@@ -1,5 +1,5 @@
 ---
-title: 'The miracle of your oven turning on the lights in your house'
+title: 'the miracle of your oven turning on the lights in your house'
 date: '2024-10-30'
 desc: a very bizzare situation explained by simple electronics
 tags: ['electronics']
