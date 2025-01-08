@@ -47,6 +47,11 @@ export default function About() {
               description: "making android apps for interfacing with custom made power distribution microcontrollers built for motorcycles."
             },
             {
+              title: "backend developer",
+              place: "infera",
+              description: "designing interative and interoperable ai agents running on a distributed LLM inferencing network."
+            },
+            {
               title: "chief of web development",
               place: "qmind",
               description: "cultivating the look of the digital face of Canada's largest undergraduate artificial intelligence organization."
