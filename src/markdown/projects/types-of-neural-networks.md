@@ -100,7 +100,7 @@ Autoencoders are a specific encoder-decoder network that is specialized in learn
 ### committee of machines
 ## physical neural networks -->
 
-## references
+<!-- ## references -->
 
 [1]: https://en.wikipedia.org/wiki/Types_of_artificial_neural_networks
 [2]: https://en.wikipedia.org/wiki/Feedforward_neural_network
