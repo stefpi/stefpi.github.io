@@ -29,7 +29,7 @@ We can see that based on these equations, if we maximize voltage but are transfe
 ### split-phase power
 A split-phase system includes 3 lines (or legs) being wired to your house. One of them is a neutral (ground) wire, and the other two are both 120V AC lines which are out of phase with each other by 180 degrees. Since AC is a sine wave when plotted based on time against its amplitude (the measure of change in voltage or current of a circuit).
 
-<center>![figure 1.1](/static/blog/splitphase.png)</center>
+![figure 1.1](/static/blog/splitphase.png)
 
 <!-- #figure(
   image("image.png", width: 100%),
@@ -38,7 +38,7 @@ A split-phase system includes 3 lines (or legs) being wired to your house. One o
 
 An AC line being "180 degrees out of phase" means that one wave is half a period out of sync.
 
-<center>![figure](/static/blog/wave.png)</center>
+![figure](/static/blog/wave.png)
 
 Looking back at figure 1.1, we can see what it means for the Lines A and B to be out of sync by half a period. This means that when Line A is at its positive peak, Line B is at its negative peak and vice versa.
 

@@ -6,7 +6,7 @@ import markdownit from "markdown-it";
 import katex from "katex";
 import parse from "html-react-parser"
 
-import ProjectLayout from "../projectlayout";
+import ProjectLayout from "@/layouts/ProjectLayout";
 
 import "./page.css";
 
@@ -103,7 +103,7 @@ export default function Projects(props) {
   const result = md.render(post.content);
 
   return (
-    <ProjectLayout>
+    <ProjectLayout title="projects/explorations">
       <article id="article">
         <h1 style={{textAlign: "center"}}>{post.data.title}</h1>
         <div>{parse(result)}</div>

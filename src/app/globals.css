@@ -63,21 +63,17 @@ a:active, a > *:active {
 a:focus { text-decoration: underline; color:var(--primary-text-color); }
 
 button {
-  height: 40px;
-
-  background-color: var(--background-color);
-  color: black;
-
-  border-radius: var(--rounding);
-  border: 1px solid var(--primary-color);
-
-  text-align: center;
-
-  padding: 8px 12px;
-
   > .back {
     height: 100%;
     width: auto;
+
+    height: 40px;
+    background-color: var(--background-color);
+    color: black;
+    border-radius: var(--rounding);
+    border: 1px solid var(--primary-color);
+    text-align: center;
+    padding: 8px 12px;
   }
 }
 
