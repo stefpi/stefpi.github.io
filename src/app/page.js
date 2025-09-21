@@ -22,8 +22,8 @@ export default function Home() {
       <Link href="/projects">
         <h1>explorations</h1>
       </Link>
-      <Link href="/designs">
-        <h1>designs</h1>
+      <Link href="/gallery">
+        <h1>gallery</h1>
       </Link>
     </div>
   );

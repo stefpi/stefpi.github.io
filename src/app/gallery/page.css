@@ -6,14 +6,13 @@
   justify-content: center;
   gap: var(--sm-gap);
 
-  .card {
-    height: 150px;
-    border: 8px solid white;
-    border-radius: 8px;
+  .image {
+    object-fit: cover;
+    width: 45%;
   }
 
-  .image {
-    height: 100%;
-    border-radius: 5px;
+  .scene {
+    object-fit: cover;
+    width: 100%;
   }
 }

@@ -6,7 +6,7 @@ import "./page.css"
 
 export default function Designs() {
 
-  const images = [
+  const designs = [
     "/static/designs/2.png ",
     "/static/designs/1.png ",
     "/static/designs/4.jpg ",
@@ -24,13 +24,26 @@ export default function Designs() {
     "/static/designs/10.png", 
   ]
 
+  const movie_scenes = [
+    "/static/movies/1883.jpg",
+    "/static/movies/death_star.jpeg",
+    "/static/movies/interstellar.jpg",
+    "/static/movies/the_campaign.jpg",
+  ]
+
   return (
-    <ProjectLayout title="designs">
+    <ProjectLayout title="gallery">
+      <center><h3> designs </h3></center>
       <div id="designs">
-        {images.map((image, index) => (
-          <div key={index} className="card">
-            <img src={image} alt={`Gallery ${index}`} className="image"/>
-          </div>
+        {designs.map((image, index) => (
+          <img key={index} src={image} alt={`Gallery ${index}`} className="image"/>
+        ))}
+      </div>
+      <br />
+      <center><h3> favourite movie shots </h3></center>
+      <div id="designs">
+        {movie_scenes.map((image, index) => (
+          <img key={index} src={image} alt={`Gallery ${index}`} className="scene"/>
         ))}
       </div>
     </ProjectLayout>

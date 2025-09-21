@@ -16,7 +16,6 @@ The purpose of this exploration is to test the differences in performance betwee
 - On-policy TD control and Off-policy TD control follow the given SARSA and Q-learning definitions respectively.
 
 <br>
-All methods have a plotting function that shows the policy they have generated and this can be seen in the jupyter notebook submitted.
 
 ### Hyper Parameters
 
