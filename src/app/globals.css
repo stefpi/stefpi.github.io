@@ -45,19 +45,23 @@ body {
 body .narrow-container {
   width: 800px;
   padding: var(--xl-gap) var(--super-gap);
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding: var(--xl-gap) var(--xl-gap);
-  }
 }
 
 body .full-container {
   width: 100%;
   padding: var(--xl-gap) var(--super-gap);
   box-sizing: border-box;
+}
 
-  @media screen and (max-width: 768px) {
-    padding: var(--xl-gap);
+@media screen and (max-width: 768px) {
+  body {
+    .narrow-container {
+      width: 100%;
+      padding: var(--xl-gap) var(--xl-gap);
+    }
+    .full-container {
+      padding: var(--xl-gap);
+    }
   }
 }
 

@@ -43,7 +43,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--lg-gap);
-    margin-left: var(--xl-gap);
+    margin-left: var(--lg-gap);
     
     .card {
       width: 100%;
@@ -70,9 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-  }
-
-  #about {
+    
     .image {
       img {
         width: 100px;
