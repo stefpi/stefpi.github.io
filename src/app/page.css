@@ -7,16 +7,12 @@
   align-items: center;
   justify-content: center;
   gap: var(--xl-gap);
-}
 
-#home {
   a {
     text-decoration-thickness: 3px;
     text-underline-offset: 3px;
   }
-}
 
-#home {
   .ascii-container {
     width: 50%;
     display: flex;
@@ -38,4 +34,3 @@
     gap: var(--md-gap);
   }
 }
-

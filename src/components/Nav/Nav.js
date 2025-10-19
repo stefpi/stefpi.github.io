@@ -11,8 +11,6 @@ export default function Nav() {
   const pathname = usePathname();
   
   useEffect(() => {
-  window.addEventListener('', () => {console.log("your mother")})
-
     if (selector.current) {
       selector.current.style.visibility = "visible";
 

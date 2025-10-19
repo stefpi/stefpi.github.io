@@ -8,9 +8,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--xl-gap);
-}
 
-#about {
   .image {
     height: 100%;
     display: flex;

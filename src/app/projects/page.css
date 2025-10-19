@@ -1,25 +1,21 @@
 #projects {
-
-}
-
-#projects {
   .projectCard {
     display: flex;
     flex-direction: column;
     gap: var(--lg-gap);
     padding: var(--md-gap) 0;
 
-    .projectHeader {
+    /* .projectHeader {
 
-    }
+    } */
 
     img {
       width: 100%;
       height: auto;
     }
 
-    .projectDescription {
+    /* .projectDescription {
 
-    }
+    } */
   }
 }
