@@ -1,3 +1,5 @@
+import Nav from "@/components/Nav/Nav";
+
 import "./globals.css";
 
 export const metadata = {
@@ -12,9 +14,8 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1" />
       </head>
       <body>
-        <div>
-          {children}
-        </div>
+        <Nav />
+        {children}
       </body>
     </html>
   );

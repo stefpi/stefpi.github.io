@@ -3,10 +3,10 @@
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: var(--md-gap);
+  gap: var(--xl-gap);
 }
 
 #home {
@@ -16,5 +16,26 @@
   }
 }
 
+#home {
+  .ascii-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
+  .ascii {
+    white-space: pre;
+    /* font-family: monospace; */
+    line-height: 7px;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--md-gap);
+  }
+}
 

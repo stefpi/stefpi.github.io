@@ -1,10 +1,9 @@
 #ProjectLayout {
-  width: 100%;
   display: flex;
   flex-direction: column;
 
   header {
-    margin-top: var(--lg-gap);
+    margin: var(--lg-gap) 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -25,5 +24,11 @@
     display: flex;
     flex-direction: column;
     gap: var(--lg-gap);
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      justify-content: flex-end;
+    }
   }
 }

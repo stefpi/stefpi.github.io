@@ -7,8 +7,6 @@ import "./page.css"
 export default function Designs() {
 
   const designs = [
-    "/static/designs/2.png ",
-    "/static/designs/1.png ",
     "/static/designs/4.jpg ",
     "/static/designs/3.png ",
     "/static/designs/7.png ",
@@ -19,6 +17,8 @@ export default function Designs() {
     "/static/designs/12.png", 
     "/static/designs/15.JPG",
     "/static/designs/14.JPG", 
+    "/static/designs/2.png ",
+    "/static/designs/1.png ",
     "/static/designs/16.png",
     // "/static/designs/5.png ",
     "/static/designs/10.png", 
@@ -33,7 +33,10 @@ export default function Designs() {
 
   return (
     <ProjectLayout title="gallery">
-      <center><h3> designs </h3></center>
+      <center>
+      <h3> designs </h3>
+      <h6> mostly clothing I have created</h6>
+      </center>
       <div id="designs">
         {designs.map((image, index) => (
           <img key={index} src={image} alt={`Gallery ${index}`} className="image"/>

@@ -50,7 +50,7 @@ export default function ProjectList(props) {
   }, [selectedTags])
 
   return (
-    <>
+    <div id="projectList">
       <div className="tagListings">
         {tags.map((tag, index) => (
           <button className="postTagLarge" key={ index } onClick={handleTagClick}>
@@ -62,7 +62,7 @@ export default function ProjectList(props) {
         {posts.map(({ id, date, title, desc, tags }) => (
           <div className="postListing" key={id}>
             <div className="postHeader">
-              <Link href={`/projects/${id}`}>
+              <Link href={`/blog/${id}`}>
                 <h3>{title}</h3>
               </Link>
               <div className="postSubHeader">
@@ -83,6 +83,6 @@ export default function ProjectList(props) {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }

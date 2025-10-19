@@ -12,7 +12,7 @@ export default function ProjectLayout({ title, children }) {
   // }
   
   return (
-    <div id="ProjectLayout">
+    <div id="ProjectLayout" className="narrow-container">
       <header>
         {/* <button onClick={handleBackClick}>
           <Image
