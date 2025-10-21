@@ -15,7 +15,7 @@ export default function Projects() {
 
   return (
     <ProjectLayout title="projects" >
-      {/* <div id="projects">
+      <div id="projects">
         <hl></hl>
         {projects.map((project, index) => (
           <div key={ index }>
@@ -24,19 +24,19 @@ export default function Projects() {
                 <h2>{project.title}</h2>
                 <h6>{project.subtitle}</h6>
               </div>
-              <Image
+              {/* <Image
                 aria-hidden
                 src={project.image}
                 alt={project.title}
                 width={0}
                 height={0}
               ></Image>
-              <p className="projectDescription">{project.description}</p>
+              <p className="projectDescription">{project.description}</p> */}
             </div>
             <hl />
           </div>
         ))}
-      </div> */}
+      </div>
     </ProjectLayout>
   );
 }

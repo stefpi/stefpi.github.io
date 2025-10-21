@@ -14,14 +14,24 @@ export default function Nav() {
     if (selector.current) {
       selector.current.style.visibility = "visible";
 
+      // if (pathname.includes('about')) {
+      //   selector.current.style.top = "32px";
+      // } else if (pathname.includes('projects')) {
+      //   selector.current.style.top = "59px";
+      // } else if (pathname.includes('blog')) {
+      //   selector.current.style.top = "85px";
+      // } else if (pathname.includes('gallery')) {
+      //   selector.current.style.top = "113px";
+      // } else {
+      //   selector.current.style.visibility = "hidden";
+      // }
+
       if (pathname.includes('about')) {
         selector.current.style.top = "32px";
-      } else if (pathname.includes('projects')) {
-        selector.current.style.top = "59px";
       } else if (pathname.includes('blog')) {
-        selector.current.style.top = "85px";
+        selector.current.style.top = "59px";
       } else if (pathname.includes('gallery')) {
-        selector.current.style.top = "113px";
+        selector.current.style.top = "85px";
       } else {
         selector.current.style.visibility = "hidden";
       }
@@ -46,9 +56,9 @@ export default function Nav() {
         <Link href="/about">
           <h3>about</h3>
         </Link>
-        <Link href="/projects">
+        {/* <Link href="/projects">
           <h3>projects</h3>
-        </Link>
+        </Link> */}
         <Link href="/blog">
           <h3>blog</h3>
         </Link>

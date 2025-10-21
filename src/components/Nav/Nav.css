@@ -25,7 +25,7 @@
     position: fixed;
     z-index: 99;
     top: 50%;
-    right: calc(2 * var(--xl-gap));
+    right: var(--xl-gap);
     transform: translate(0%, -50%);
 
     display: flex;
