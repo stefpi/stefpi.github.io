@@ -28,7 +28,7 @@ export default function Designs() {
     "/static/movies/1883.jpg",
     "/static/movies/death_star.jpeg",
     "/static/movies/interstellar.jpg",
-    "/static/movies/the_campaign.jpg",
+    // "/static/movies/the_campaign.jpg",
   ]
 
   return (

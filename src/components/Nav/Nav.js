@@ -26,14 +26,13 @@ export default function Nav() {
       //   selector.current.style.visibility = "hidden";
       // }
 
-      if (pathname.includes('about')) {
+      if (pathname.includes('blog')) {
         selector.current.style.top = "32px";
-      } else if (pathname.includes('blog')) {
-        selector.current.style.top = "59px";
       } else if (pathname.includes('gallery')) {
-        selector.current.style.top = "85px";
+        selector.current.style.top = "59px";
       } else {
-        selector.current.style.visibility = "hidden";
+        // selector.current.style.visibility = "hidden";
+        selector.current.style.top = "5px";
       }
     }
   }, [pathname])
@@ -50,10 +49,10 @@ export default function Nav() {
           className="selector"
           ref={selector}
         />
-        <Link href="/">
+        {/* <Link href="/">
           <h3>home</h3>
-        </Link>
-        <Link href="/about">
+        </Link> */}
+        <Link href="/">
           <h3>about</h3>
         </Link>
         {/* <Link href="/projects">
