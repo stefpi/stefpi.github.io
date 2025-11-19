@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  --rounding: 15px;
+  --rounding: 5px;
 
   --background-color: #F5F5F5;
   --secondary-background-color: #D3D3D3;

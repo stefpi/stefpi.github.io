@@ -22,7 +22,7 @@ The purpose of this exploration is to test the differences in performance betwee
 For MC control there are two hyper parameters: epsilon and gamma.
 For TD control there are three hyper parameters: alpha, epsilon and gamma.
 
-```
+```python
 import itertools
 
 param_grid = {
@@ -102,7 +102,7 @@ In conclusion, it is clear to see that off-policy TD performed the best out of a
 
 ### Code
 
-```
+```python
 """ON-POLICY MC CONTROL"""
 
 def on_policy_mc_control(gw, num_episodes=1000, epsilon=0.1, gamma=0.9):

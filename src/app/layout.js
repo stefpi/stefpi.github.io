@@ -3,8 +3,8 @@ import Nav from "@/components/Nav/Nav";
 import "./globals.css";
 
 export const metadata = {
-  title: "stefpi.github.io",
-  description: "a time capsule of a limited collection of knowledge explorations",
+  title: "stefpi",
+  description: "a time capsule of explorations",
 };
 
 export default function RootLayout({ children }) {

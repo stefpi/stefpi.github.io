@@ -19,7 +19,7 @@
 
   main {
     text-align: left;
-    margin-top: var(--xl-gap);
+    margin-top: var(--md-gap);
     margin-bottom: calc(var(--xl-gap) * 1.5);
     display: flex;
     flex-direction: column;

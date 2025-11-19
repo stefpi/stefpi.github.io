@@ -5,6 +5,8 @@ import matter from "gray-matter";
 import markdownit from "markdown-it";
 import katex from "katex";
 import parse from "html-react-parser"
+import hljs from "highlight.js";
+import "highlight.js/styles/base16/mexico-light.css"
 
 import ProjectLayout from "@/layouts/ProjectLayout";
 
@@ -36,7 +38,21 @@ function katexRenderer(displayMode) {
 }
 
 export default function Projects(props) {
-  const md = markdownit({ html: true });
+  const md = markdownit({ 
+    html: true,
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return `<pre><div class="hljs-header">${lang}</div><code class="hljs">` +
+                hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+              `</code>
+            </pre>`;
+        } catch (__) {}
+      }
+
+      return '<pre><code class="hljs">' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
+  });
 
   function addKatexInlineRule(regex) {
     md.inline.ruler.before("escape", "math_inline", (state, silent) => {
@@ -96,7 +112,7 @@ export default function Projects(props) {
 
   md.renderer.rules.math_inline = katexRenderer(false);
   md.renderer.rules.math_block = katexRenderer(true);
-  
+
   const slug = props.params.slug
   const post = getPostContent(slug);
 
