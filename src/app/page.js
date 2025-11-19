@@ -100,10 +100,6 @@ export default function Home() {
 
         <hl />
 
-        <div>
-          <p><b>went to school</b> @ Queen's University. <i>Bachelor of Computing (AI Specialization) with a Minor in Mathematics</i></p>
-        </div>
-
       </div>
     </div>
   );
