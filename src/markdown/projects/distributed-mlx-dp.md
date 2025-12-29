@@ -93,7 +93,7 @@ def step(model, x, y):
 	return loss
 ```
 
-Finally, we have our training loop, which we will limit to 100 batches since we are just testing and looking at how we can increase per-batch performance.
+Finally, we have our training loop, which we will limit to 100 batches since we are just testing. As we implement more and see promising results, this size will go up.
 
 ```python
 for batch in data_iter:
