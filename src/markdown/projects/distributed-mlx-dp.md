@@ -172,7 +172,7 @@ I said before we ran this that this isn't exactly data parallelism and now I wil
 
 Both processes use `load_data_and_tokenizer` and `batch_iterate` on the entire dataset, redoing the work that the other has done. This results in the dataset and all batches being loaded into memory twice and although the process is only processing half the batch, it has still loaded the entire batch. We can attempt to prove this is happening by using `mlx.core.get_peak_memory()` and/or `mlx.core.get_active_memory()`.
 
-Our naive training implementation gives us a peak memory usage of around 2.17 GB, while our new DP training implementation gives us a peak memory usage of around 1.4 GB for each process. For better memory profiling, I asked Gemini to write me a bash script that constantly polls the dp_train.py processes for their memory consumption, which includes mlx.launch instance and two python instances of dp_train.py (can be read in depth in the repo).
+Our naive training implementation gives us a peak memory usage of around 2.17 GB, while our new DP training implementation gives us a peak memory usage of around 1.4 GB for each process. For better memory profiling, I asked Gemini to write me a bash script that constantly polls the dp_train.py processes for their memory consumption, which includes mlx.launch instance and two python instances of dp_train.py (can be read in depth in the [repo](https://github.com/stefpi/mlxtron/tree/main/monitor.sh)).
 
 ![figure 0.1](</static/blog/mlx/Screenshot 2025-12-28 at 7.24.42 PM 1.png>)
 
