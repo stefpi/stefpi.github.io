@@ -182,6 +182,43 @@ This gives us a way better idea of what is going on when we run a `mlx.launch` c
 
 This proves that we have not actually implemented data parallelism yet and are currently wasting memory. It also does tell me that I would like to have more useful memory profiling tools for MLX on mac silicon. If anyone has suggestions lmk.
 
-#### so... let's make it better... and implement **real data parallelism**
+#### so... let's implement **data parallelism** (real)
 
-How do we implement it the right way? We make a dedicated **Distributed Data Loader** which is capable of loading into memory only the things a process requires.
+How do we implement it the right way? We make sure to load only the data the process requires into memory. This is usually done by a dedicated *Distributed Data Loader class* which I plan on making in the future for this project, but until then we can explore this concept in a simpler way. A requirement that can mark our success in this journey is being able to spawn as many processes as we want and see little difference in the amount of memory used. This would mean that our dataset is only loaded once and all the processes are simply accessing or are sent the data they need.
+
+Our problem lies mainly within the `load_data_and_tokenizer` function we implemented. Specifically,
+
+```python
+dataset = load_dataset("roneneldan/TinyStories", split="train", streaming=False)
+```
+
+This line is using the `load_dataset` function from the `datasets` pip package from HuggingFace. Currently, every process that we spawn will run this line of code as a part of it initialization step. This effectively loads the entire dataset (or some part of the dataset) into memory for every process, causing much redundancy.
+
+We can improve this by using the `split` feature on the `load_dataset` function and making it pull a different part of the dataset in order to only load everything once overall. We could also use the `mlx.core.distributed.send` functionality to send individual micro batches to each device/process, but we will explore that later and compare the differences. Here, by doing it this way we eliminate the communication step of sending batches to each process, but if we were using multiple devices, we would need a copy of the dataset on each one.
+
+We can update the `load_dataset` implementation to the following,
+
+```python
+shard_percentage = (100 / world_size)
+shard_start = int(shard_percentage * rank)
+shard_end = int(shard_start + shard_percentage)
+dataset = load_dataset("roneneldan/TinyStories", split=f"train[{shard_start}%:{shard_end}%]", streaming=False)
+```
+
+This now uses a specified string format to load only a certain percentage in the data, based on the rank of the process and size of the world. In our test case with 2 processes, rank 0 will load 0% to 50% of the training dataset and rank 1 will load 50% to 100%. If we run this now, we should see that our memory consumption has gone down to almost match the memory consumption of running our naive training.
+
+We can also use a more robust method to get equal sized splits described in the [HF Loading documentation](https://huggingface.co/docs/datasets/loading) which is to use `pct1_dropremainder`. This may eliminate some examples in the dataset if they don't divide evenly among the processes/devices, but will make the future easier for us in terms of synchronization. This can be done by changing the split argument to:
+
+```python
+split=f"train[{shard_start}%:{shard_end}%](pct1_dropremainder)"
+```
+
+![[Screenshot 2025-12-29 at 12.51.08 AM.png]]
+
+While running, we can notice some interesting things. First, one process is somehow using less memory than the other process. Second, the peak memory usage is still quite high at 3.27 GB. Third, our average total is quite low!
+
+![[Screenshot 2025-12-29 at 12.52.00 AM.png]]
+
+After the entire run finished, we can now see that the average memory usage of the DP training file is much reduced, and only around 300 MB larger than the naive training implementation. While 14.47 MB are being used by the orchestrator, there are many other things that could be contributing to this increase, but at least we are now not loading the entire dataset twice.
+
+In the future I will build a much more robust data loader as a class to allow for many different datasets to be loaded and to also get a chance to see this running on two separate devices with varying amount of available memory.
