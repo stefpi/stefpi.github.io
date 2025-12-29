@@ -1,8 +1,8 @@
 ---
-title: 'basic distributed communication with MLX'
+title: 'basic distributed communication with mlx'
 date: '2025-11-19'
-desc: exploring basic MPI communication with MLX
-tags: ['distributive computing', 'MLX']
+desc: exploring basic MPI communication with mlx
+tags: ['distributed computing', 'MLX']
 ---
 
 ```python
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 we can spin up `n` suprocesses to simulate `n` different devices running in a distributed network (and communicating via MPI) using: `mlx.launch -n 2 python test.py`
 
 ```bash
-(.venv) ~/ws/git/personal/mlxtron > mlx.launch -n 2 python test.py
+(.venv) ~/mlxtron > mlx.launch -n 2 python test.py
 Process 1/2 initialized.
 Process 2/2 initialized.
 ```
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 ```
 
 ```bash
-(.venv) ~/ws/git/personal/mlxtron > mlx.launch -n 2 python test.py
+(.venv) ~/mlxtron > mlx.launch -n 2 python test.py
 Process 2/2 initialized.
 Process 1 computed data sum to be 7
 Data sum total = 10
@@ -68,7 +68,7 @@ We can see that process 1 computed the sum of the first 2 elements of the list a
 the output looks like the processes are running sequentially, but in reality this is due to **python output buffering** to improve performance of print statements. We can add `flush=True` to each print statement to force the interpreter to flush the text to the terminal immediately.
 
 ```bash
-(.venv) ~/ws/git/personal/mlxtron > mlx.launch -n 2 python test.py
+(.venv) ~/mlxtron > mlx.launch -n 2 python test.py
 Process 1/2 initialized.
 Process 0 computed data sum to be 3
 Process 2/2 initialized.
