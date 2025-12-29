@@ -213,11 +213,11 @@ We can also use a more robust method to get equal sized splits described in the 
 split=f"train[{shard_start}%:{shard_end}%](pct1_dropremainder)"
 ```
 
-![[Screenshot 2025-12-29 at 12.51.08 AM.png]]
+![figure 0.1](</static/blog/mlx/Screenshot 2025-12-29 at 12.51.08 AM.png>)
 
 While running, we can notice some interesting things. First, one process is somehow using less memory than the other process. Second, the peak memory usage is still quite high at 3.27 GB. Third, our average total is quite low!
 
-![[Screenshot 2025-12-29 at 12.52.00 AM.png]]
+![figure 0.1](</static/blog/mlx/Screenshot 2025-12-29 at 12.52.00 AM.png>)
 
 After the entire run finished, we can now see that the average memory usage of the DP training file is much reduced, and only around 300 MB larger than the naive training implementation. While 14.47 MB are being used by the orchestrator, there are many other things that could be contributing to this increase, but at least we are now not loading the entire dataset twice.
 
