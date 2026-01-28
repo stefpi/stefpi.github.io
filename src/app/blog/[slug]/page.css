@@ -54,6 +54,10 @@
     line-height: 1.25rem;
   }
 
+  ul {
+    padding-left: 2rem;
+  }
+
   span.katex-display {
     display: block;
     margin-bottom: 1rem;
