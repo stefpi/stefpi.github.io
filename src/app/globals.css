@@ -43,8 +43,9 @@ body {
 }
 
 body .narrow-container {
-  width: 800px;
+  max-width: 800px;
   padding: var(--xl-gap) var(--super-gap);
+   box-sizing: border-box;
 }
 
 body .full-container {
@@ -57,7 +58,7 @@ body .full-container {
   body {
     .narrow-container {
       width: 100%;
-      padding: var(--xl-gap) var(--xl-gap);
+      padding: var(--xl-gap);
     }
     .full-container {
       padding: var(--xl-gap);

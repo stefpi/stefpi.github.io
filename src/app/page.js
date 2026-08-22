@@ -7,6 +7,13 @@ export default function Home() {
 
   const jobs = [
     {
+      title: "openpilot software engineer",
+      place: "comma",
+      description: [
+        "pushing forward the development of the comma body robotics platform and the connect companion app",
+      ]
+    },
+    {
       title: "embedded systems engineer",
       description: [
         "making apps for interfacing with power distribution modules for vehicles.",
@@ -23,10 +30,10 @@ export default function Home() {
       title: "software developer",
       description: ["working on distributed computing across edge devices by leverging the browser web stack."]
     },
-    {
-      title: "backend developer",
-      description: ["designing interative and interoperable ai agents running on a distributed LLM inferencing network."]
-    },
+    // {
+    //   title: "backend developer",
+    //   description: ["designing interative and interoperable ai agents running on a distributed LLM inferencing network."]
+    // },
     {
       title: "chief of web development",
       description: ["cultivating the look of the digital face of Canada's largest undergraduate artificial intelligence organization."]
@@ -60,7 +67,7 @@ export default function Home() {
         <div className="experience"> 
           <div className="card">
             <div className="cardHeader">
-              <p><u><i>{jobs[0].title}</i></u></p>
+              <p><u><i>{jobs[0].title}</i> @ <b>{jobs[0].place}</b></u></p>
             </div>
             <div className="cardBody">
               {jobs[0].description.map((desc, index) => (
